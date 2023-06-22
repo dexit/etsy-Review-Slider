@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Etsy Review Slider Example</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <h1>Etsy Review Slider Example</h1>
+  <div id="slider-container"></div>
+  <script type="text/javascript" src="script.js"></script>
+  <script type="text/javascript">
+    EtsyReviewSlider('your-shop-id', 'your-api-key')
+      .then(container => {
+        document.getElementById('slider-container').appendChild(container);
+      })
+      .catch(error => {
+        console.log(error);
+      });
+  </script>
+</body>
+</html>
